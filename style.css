@@ -1,0 +1,92 @@
+    .btn1 {
+        box-shadow: 2px 2px 4px;
+        margin: 3px;
+        background-color: #fff;
+        border: 1px solid white;
+        width: 90px;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+    
+    .sign-out {
+        /* height: 70px;
+    width: 70px; */
+        font-size: 20px;
+    }
+    
+    .tag-line {
+        font-weight: bolder;
+        text-align: center;
+    }
+    
+    #list {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    
+    .add-form {
+        border: 1px solid black;
+        /* border-radius: 5px; */
+    }
+    
+    .message {
+        list-style: none;
+        display: block;
+    }
+    
+    .right {
+        text-align: right;
+        margin-right: 10px;
+    }
+    
+    .left {
+        text-align: left;
+        margin-left: 10px;
+    }
+    
+    .message-text {
+        /* margin-right: 50px; */
+        border: 1px solid #e3dbd8;
+        list-style: none;
+        min-width: 50px;
+        border-radius: 15px;
+        padding: 5px 20px;
+        margin-top: 5px;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .icon {
+        font-size: 30px;
+    }
+    
+    .i2 {
+        font-size: 20px;
+    }
+    
+    #todo-item {
+        margin-bottom: 8px;
+        border: 1px solid black;
+        height: 40px;
+        width: 400px;
+        border-radius: 10px;
+        outline: none;
+    }
+    
+    .blue {
+        background-color: #baf88b;
+        color: black;
+    }
+    
+    .grey {
+        background-color: #fff;
+    }
+    
+    .msg-txt {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }

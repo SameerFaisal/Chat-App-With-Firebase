@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,11 +13,10 @@
     <link rel="stylesheet" href="sign.css">
 
 
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -35,51 +35,46 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
-    <script>
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in.
-                window.location.href = "chat.html";
-            } else {
-                // No user is signed in.
-
-            }
-        });
-    </script>
-
-
 </head>
 
 <body>
-
-    <div class="container-fluid" style=" display: flex;  height: 450px; align-items: center; justify-content: center;  width: 830px; margin-top: 100px; flex-direction: row;">
-
+    <div class="container-fluid" style=" display: flex;  align-items: center; height: 450px; justify-content: center;  width: 830px; margin-top: 100px; flex-direction: row;">
+        <a href="./index.html">
+            <h2 style=" text-decoration: none; font-family: 'Times New Roman', Times, serif; font-size: 50px; color: white;  width: 150px;">Sign in</h2>
+        </a>
         <div class="container">
 
-            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 60px;">Sign in </h2>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 60px;">Create your account </h2>
             <form style="  width: 500px; margin-bottom: 20px; margin-top: 30px;">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input style="border: 1px solid whitesmoke;" type="text" required class="form-control" id="firstName" placeholder="First name" autocomplete="cc-given-name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input style="border: 1px solid whitesmoke;" type="text" required class="form-control" id="lastName" placeholder="Last name" autocomplete="cc-additional-name">
+                </div>
                 <div class="form-group ">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" style="border: 1px solid whitesmoke;" required class="form-control" id="Email1" placeholder="Email" autocomplete="email">
+                    <input type="email" style="border: 1px solid whitesmoke;" autocomplete="email" required class="form-control" id="inputEmail4" placeholder="Email">
                 </div>
                 <div class="form-group ">
                     <label for="inputPassword4">Password</label>
-                    <input type="password" style="border: 1px solid whitesmoke;" required class="form-control" id="Password1" placeholder="Password" autocomplete="current-password">
+                    <input type="password" autocomplete="current-password" style="border: 1px solid whitesmoke;" required class="form-control" id="inputPassword4" placeholder="Password">
                 </div>
 
 
 
-                <button type="button" id="btn-sub" onclick="signIn()" style="background-color:blueviolet; color: white;" class="btn">Sign in</button> <br><br>
+                <button type="button" onclick="signUp()" style="color: white; background-color: #ff73b2;" class="btn">Sign up</button><br><br>
 
-                <h2 style="  color: black; ">Not Registered?
-                    <a style="color: black; text-decoration: underline;" href="./register.html">Register</a>
-                </h2>
             </form>
 
         </div>
 
 
     </div>
+    <script src="auth.js"></script>
+
 </body>
 
 </html>

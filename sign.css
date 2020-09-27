@@ -1,0 +1,10 @@
+body {
+    height: 100%;
+}
+
+.container {
+    width: 530px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: lightblue;
+}
